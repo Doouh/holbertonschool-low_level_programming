@@ -8,6 +8,15 @@
 
 int main(void)
 {
+	char alp[] = {"0123456789abcdef"};
+	int i;
+
+	for (i = 0; i < 17; i++)
+	{
+		putchar(alp[i]);
+	}
+
+	putchar('\n');
 
 	return (0);
 }
