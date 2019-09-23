@@ -1,12 +1,14 @@
-#include<stdio.h>
+#include "holberton.h"
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-
-int main(void)
+int print_last_digit(int v)
 {
-        return (0);
+	int r;
+	r = v % 10;
+		
+
+	if (r < 0)
+	{
+
+	}
+	return (r);
 }

@@ -1,14 +1,15 @@
-#include <stdio.h>
 #include "holberton.h"
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-
-int main(void)
+void print_alphabet_x10(void)
 {
-	print_alphabet_x10();
-        return (0);
+	char alp;
+	int i;
+	for (i = 0; i < 10; i++)
+	{
+		for (alp = 'a'; alp <= 'z'; alp++)
+		{
+			_putchar(alp);
+		}
+		_putchar('\n');
+	}
 }

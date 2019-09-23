@@ -1,15 +1,14 @@
-#include <stdio.h>
 #include "holberton.h"
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
+	char alp[] = {"abcdefghijklmnopqrstuvwxyz"};
+	int i;
 
-	return (0);
+	for (i = 0; i < 27; i++)
+	{
+		_putchar(alp[i]);
+	}
+	_putchar('\n');
+
 }
