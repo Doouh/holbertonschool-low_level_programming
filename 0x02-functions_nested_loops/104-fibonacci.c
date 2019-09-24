@@ -15,10 +15,10 @@ int main(void)
 	x = 0;
 	y = 1;
 
-	for (i = 1; i <= 100; i++)
+	for (i = 1; i <= 99; i++)
 	{
 		z = x + y;
-		if (i != 100)
+		if (i != 99)
 			printf("%.f, ", z);
 		else
 			printf("%.f\n", z);
