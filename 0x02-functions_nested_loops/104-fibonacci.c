@@ -18,12 +18,13 @@ int main(void)
 	for (i = 1; i <= 100; i++)
 	{
 		z = x + y;
-		printf("%.f,", z);
+		if (i != 100)
+			printf("%.f, ", z);
+		else
+			printf("%.f\n", z);
 		x = y;
 		y = z;
 	}
-
-	printf("\n");
 
 	return (0);
 }
