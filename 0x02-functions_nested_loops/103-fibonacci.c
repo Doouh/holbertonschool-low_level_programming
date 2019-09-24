@@ -19,13 +19,16 @@ int main(void)
 	for (i = 1; i < 33; i++)
 	{
 		z = x + y;
-		if (z % 2.00000 == 0.00000)
+		if ((int)z % (int)2.00000 == 0.00000)
 		{
 			if (z != 2)
-				printf("%.f\n", z);
+				printf("%.f, ", z);
 
 			ac = ac + z;
-			printf("%.f\n", ac);
+			if (i != 32)
+				printf("%.f, ", ac);
+			else
+				printf("%.f\n", ac);
 		}
 		x = y;
 		y = z;
