@@ -1,12 +1,6 @@
-#include<stdio.h>
+#include "holberton.h"
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-
-int main(void)
+int add(int x, int y)
 {
-        return (0);
+	return (x + y);
 }
