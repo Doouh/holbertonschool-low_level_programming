@@ -12,13 +12,15 @@ int main(void)
 	double x, y, z;
 	int i;
 
-	x = 0;
-	y = 1;
+	x = 1;
+	y = 2;
 
-	for (i = 1; i <= 98; i++)
+	printf("1, 2\n");
+
+	for (i = 0; i < 96; i++)
 	{
 		z = x + y;
-		if (i != 98)
+		if (i != 95)
 			printf("%.f, ", z);
 		else
 			printf("%.f\n", z);
