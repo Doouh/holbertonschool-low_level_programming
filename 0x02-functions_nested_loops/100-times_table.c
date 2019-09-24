@@ -43,16 +43,8 @@ void print_times_table(int n)
 					_putchar('0' + d1);
 					_putchar('0' + d2);
 				}
-				else
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + (a + i));
-				}
-				a = a + i;
 			}
+			a = a + i;
 			_putchar('\n');
 		}
 	}

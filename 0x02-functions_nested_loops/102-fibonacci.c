@@ -18,7 +18,10 @@ int main(void)
 	for (i = 1; i <= 50; i++)
 	{
 		z = x + y;
-		printf("%.f, ", z);
+		if (i != 50)
+			printf("%.f, ", z);
+		else
+			printf("%.f\n", z);
 		x = y;
 		y = z;
 	}
