@@ -1,8 +1,16 @@
 #include "holberton.h"
 
+/**
+* print_to_98 - Entry point
+* @n: int variable
+*
+* Return: Always 0 (Success)
+*/
+
 void print_to_98(int n)
 {
 	int i, d1, d2, d3, ban = 0;
+
 	i = n;
 	if (n <= 98)
 	{
@@ -25,13 +33,11 @@ void print_to_98(int n)
 				_putchar('0' + d1);
 				_putchar('0' + d2);
 			}
-			
-			if(ban == 1)
+			if (ban == 1)
 			{
 				i = i * -1;
 				ban = 0;
 			}
-			
 			if (i != 98)
 			{
 				_putchar(',');

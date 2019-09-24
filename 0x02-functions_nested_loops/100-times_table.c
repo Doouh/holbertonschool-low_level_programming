@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+* print_times_table - Entry point
+* @n: int variable
+*
+* Return: Always 0 (Success)
+*/
+
 void print_times_table(int n)
 {
 	if (n < 0 || n > 15)
@@ -8,13 +15,14 @@ void print_times_table(int n)
 	else
 	{
 		int i, m, a, d1, d2, d3;
-		for (i = 0; i < n+1; i++)
+
+		for (i = 0; i < (n + 1); i++)
 		{
 			a = 0;
 			_putchar(48);
 			for (m = 0; m < n; m++)
-			{	
-				if((a + i) > 99)
+			{
+				if ((a + i) > 99)
 				{
 					d1 = (a + i) / 100;
 					d2 = ((a + i) / 10) % 10;
@@ -25,7 +33,7 @@ void print_times_table(int n)
 					_putchar('0' + d2);
 					_putchar('0' + d3);
 				}
-				else if((a + i) > 9)
+				else if ((a + i) > 9)
 				{
 					d1 = (a + i) / 10;
 					d2 = (a + i) % 10;

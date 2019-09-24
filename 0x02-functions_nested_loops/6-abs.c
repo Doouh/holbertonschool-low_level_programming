@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+* _abs - Entry point
+* @v: int variable
+*
+* Return: Always 0 (Success)
+*/
+
 int _abs(int v)
 {
 	int r = 0;
@@ -13,5 +20,5 @@ int _abs(int v)
 		r = v;
 	}
 
-	return r;
+	return (r);
 }

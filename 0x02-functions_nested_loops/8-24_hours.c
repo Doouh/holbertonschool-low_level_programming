@@ -1,9 +1,14 @@
 #include "holberton.h"
 
+/**
+* jack_bauer - Entry point
+*
+*/
+
 void jack_bauer(void)
 {
 	int h1, h2, m1, m2, l = 10;
-	
+
 	for (h1 = 0; h1 < 3; h1++)
 	{
 		if (h1 == 2)
@@ -16,11 +21,11 @@ void jack_bauer(void)
 			{
 				for (m2 = 0; m2 < 10; m2++)
 				{
-					_putchar('0'+h1);
-					_putchar('0'+h2);
+					_putchar('0' + h1);
+					_putchar('0' + h2);
 					_putchar(':');
-					_putchar('0'+m1);
-					_putchar('0'+m2);
+					_putchar('0' + m1);
+					_putchar('0' + m2);
 					_putchar('\n');
 				}
 			}

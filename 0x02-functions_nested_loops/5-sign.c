@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+* print_sign - Entry point
+* @n: int variable
+*
+* Return: Always 0 (Success)
+*/
+
 int print_sign(int n)
 {
 	if (n > 0)

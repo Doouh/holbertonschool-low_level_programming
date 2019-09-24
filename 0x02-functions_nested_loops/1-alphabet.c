@@ -11,10 +11,9 @@ void print_alphabet(void)
 	char alp[] = {"abcdefghijklmnopqrstuvwxyz"};
 	int i;
 
-	for (i = 0; i < 27; i++)
+	for (i = 0; i < 26; i++)
 	{
 		_putchar(alp[i]);
 	}
 	_putchar('\n');
-
 }

@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+* _isalpha - Entry point
+*
+* @c: int variable
+* Return: 1 or 0
+*/
+
 int _isalpha(int c)
 {
 	int a = 0;
