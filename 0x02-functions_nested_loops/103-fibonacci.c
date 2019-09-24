@@ -21,8 +21,8 @@ int main(void)
 		z = x + y;
 		if ((int)z % (int)2.00000 == 0.00000)
 		{
-			if (z != 2)
-				printf("%.f, ", z);
+			//if (z != 2)
+			//	printf("%.f, ", z);
 
 			ac = ac + z;
 			if (i != 32)
