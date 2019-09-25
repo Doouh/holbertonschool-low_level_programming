@@ -10,7 +10,7 @@
 int main(void)
 {
 	double x, y, z, ac;
-	int i;
+	int i, med;
 
 	ac = 0;
 	x = 0;
@@ -19,7 +19,8 @@ int main(void)
 	for (i = 1; i < 33; i++)
 	{
 		z = x + y;
-		if ((int)z % (int)2.00000 == 0.00000)
+		med = z;
+		if (med % 2 == 0)
 			ac = ac + z;
 
 		x = y;
