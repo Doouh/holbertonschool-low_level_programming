@@ -15,7 +15,7 @@ int main(void)
 	x = 1;
 	y = 2;
 
-	printf("1, 2\n");
+	printf("1, 2, ");
 
 	for (i = 0; i < 96; i++)
 	{
