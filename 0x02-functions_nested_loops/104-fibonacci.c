@@ -14,7 +14,6 @@ int main(void)
 
 	x = 1;
 	y = 2;
-	
 	printf("1, 2, ");
 	for (i = 0; i < 90; i++)
 	{
@@ -23,19 +22,16 @@ int main(void)
 		x = y;
 		y = z;
 	}
-	
 	ppx = x / 10000000000;
 	spx = x % 10000000000;
 	ppy = y / 10000000000;
 	spy = y % 10000000000;
-
-	i = 89;
 	for (i = 90; i < 96; i++)
 	{
 		ppz = ppx + ppy;
 		spz = spx + spy;
 		if (i == 91 || i == 92 || i == 94 || i == 95)
-		{	
+		{
 			spz = spz - 10000000000;
 			ppz = ppz + 1;
 		}
@@ -44,7 +40,7 @@ int main(void)
 		else
 			printf("%lu%lu\n", (unsigned long) ppz, (unsigned long) spz);
 		ppx = ppy;
- 		spx = spy;
+		spx = spy;
 		ppy = ppz;
 		spy = spz;
 	}
