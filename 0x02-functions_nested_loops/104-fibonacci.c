@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	double x, y, z;
+	unsigned long x, y, z;
 	int i;
 
 	x = 1;
@@ -21,9 +21,9 @@ int main(void)
 	{
 		z = x + y;
 		if (i != 95)
-			printf("%.f, ", z);
+			printf("%lu, ", z);
 		else
-			printf("%.f\n", z);
+			printf("%lu\n", z);
 		x = y;
 		y = z;
 	}

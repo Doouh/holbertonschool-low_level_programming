@@ -1,6 +1,52 @@
-#include<stdio.h>
 #include "holberton.h"
 
+/**
+ * m99 - Prints "Hello"
+ * @n: The number to be checked
+ */
+void m99(int n)
+{
+	int d1, d2, d3;
+
+	d1 = n / 100;
+	d2 = (n / 10) % 10;
+	d3 = n % 10;
+	_putchar(',');
+	_putchar(' ');
+	_putchar('0' + d1);
+	_putchar('0' + d2);
+	_putchar('0' + d3);
+}
+
+/**
+ * m9 - Prints "Hello"
+ * @n: The number to be checked
+ */
+void m9(int n)
+{
+	int d1, d2;
+
+	d1 = n / 10;
+	d2 = n % 10;
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar('0' + d1);
+	_putchar('0' + d2);
+}
+
+/**
+ * m0 - Prints "Hello"
+ * @n: The number to be checked
+ */
+void m0(int n)
+{
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar('0' + n);
+}
 
 /**
  * print_times_table - entry point
@@ -20,24 +66,19 @@ void print_times_table(int n)
 		for (i = 0; i < (n + 1); i++)
 		{
 			a = 0;
-			printf("0");
+			_putchar('0' + 0);
 			for (m = 0; m < n; m++)
 			{
 				if ((a + i) > 99)
-				{
-					printf(", %d", (a + i));
-				}
+					m99(a + i);
 				else if ((a + i) > 9)
-				{
-					printf(",  %d", (a + i));
-				}
+					m9(a + i);
 				else
-				{
-					printf(",   %d", (a + i));
-				}
+					m0(a + i);
+
 				a = a + i;
 			}
-			printf("\n");
+			_putchar('\n');
 		}
 	}
 }
