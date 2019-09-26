@@ -8,7 +8,6 @@
 
 int main(void)
 {
-	int l = 2;
 	unsigned long i, m = 0, acu = 1, n = 612852475143;
 
 	for (i = 2; i <= n; i++)
