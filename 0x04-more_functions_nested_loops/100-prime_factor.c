@@ -15,12 +15,14 @@ int main(void)
 	{
 		if (n % i == 0)
 		{
-			printf("%lu  \n", i);
 			n = n / i;
 			acu = acu * i;
 
 			if (acu == n)
+			{
+				printf("%lu  \n", i);
 				n = i;
+			}
 		}
 	}
 
