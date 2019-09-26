@@ -18,7 +18,7 @@ int main(void)
 			n = n / i;
 			acu = acu * i;
 
-			if(i > m)
+			if (i > m)
 				m = i;
 
 			if (acu == n)
