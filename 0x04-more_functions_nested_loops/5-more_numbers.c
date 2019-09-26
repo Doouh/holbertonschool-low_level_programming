@@ -1,19 +1,5 @@
 #include "holberton.h"
 
-void pri(int);
-
-/**
-* pri - Entry point
-* @n: int variable
-*
-*/
-
-void pri(int n)
-{
-	_putchar('0' + (n / 10));
-	_putchar('0' + (n % 10));
-}
-
 /**
 * more_numbers - Entry point
 *
@@ -21,16 +7,19 @@ void pri(int n)
 
 void more_numbers(void)
 {
-	int i, j;
+	int i, j, inc = 10;
 
 	for (j = 0; j < 10; j++)
 	{
 		for (i = 0; i < 15; i++)
 		{
-			if (i < 10)
-				_putchar('0' + i);
-			else
-				pri(i);
+			if (i > 9)
+			{
+				_putchar('0' + 1);
+				inc = 0;
+			}
+
+			_putchar('0' + ((i + inc) % 10));
 		}
 		_putchar('\n');
 	}
