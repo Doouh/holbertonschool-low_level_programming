@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
 * print_number - Entry point
@@ -8,7 +7,7 @@
 
 void print_number(int n)
 {
-	int i;
+	unsigned int i;
 
 	if (n < 0)
 	{
