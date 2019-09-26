@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+*/
+
+int main(void)
+{
+	int l = 2;
+	unsigned long i, acu = 1, n = 612852475143;
+
+	for (i = 2; i <= n; i++)
+	{
+		if (n % i == 0)
+		{
+			printf("%lu  \n", i);
+			n = n / i;
+			acu = acu * i;
+
+			if (acu == n)
+				n = i;
+		}
+	}
+
+	printf("\n");
+	return (0);
+}
