@@ -9,7 +9,7 @@
 int main(void)
 {
 	int l = 2;
-	unsigned long i, acu = 1, n = 612852475143;
+	unsigned long i, m = 0, acu = 1, n = 612852475143;
 
 	for (i = 2; i <= n; i++)
 	{
@@ -18,14 +18,16 @@ int main(void)
 			n = n / i;
 			acu = acu * i;
 
+			if(i > m)
+				m = i;
+
 			if (acu == n)
 			{
-				printf("%lu  \n", i);
 				n = i;
 			}
 		}
 	}
 
-	printf("\n");
+	printf("%lu\n", m);
 	return (0);
 }
