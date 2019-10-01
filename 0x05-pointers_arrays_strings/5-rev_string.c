@@ -2,9 +2,8 @@
 
 /**
 * rev_string - Entry point
-* @s: int variable
+* @s: char variable
 *
-* Return: Always 0 (Success)
 */
 
 void rev_string(char *s)
@@ -12,9 +11,7 @@ void rev_string(char *s)
 	int i = 0, t, j;
 
 	while (*(s + i) != '\0')
-	{
 		i++;
-	}
 
 	t = i;
 	j = t;
