@@ -10,7 +10,8 @@
 
 int _atoi(char *s)
 {
-	int i = 0, sg = 1, b1 = 0, pi, pf, b2 = 0, b3 = 0, lon, p, j, v = 0;
+	int i = 0, sg = 1, b1 = 0, pi, pf, b2 = 0, b3 = 0, lon, p = 1, j;
+	unsigned int v = 0;
 
 	if (s[0] == '\n')
 		return (0);
@@ -40,7 +41,6 @@ int _atoi(char *s)
 	}
 	lon = pf - pi;
 	j = lon - 1;
-	p = 1;
 	for (i = pf; i >= pi; i--)
 	{
 		v += (s[i] - '0') * p;
