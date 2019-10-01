@@ -1,4 +1,6 @@
-#include "holberton.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
 /**
 * main - Entry point
@@ -8,8 +10,22 @@
 
 int main(void)
 {
-	int i;
+	int num, acu = 2772;
 
-	for (i = 0; i <= i + 2; i++)
-		return(i);
+	srand(time(NULL));
+	num = rand();
+	num = 32 + rand() % (126 - 32);
+
+	while (acu != 0)
+	{
+		printf("%c", num);
+		acu = acu - num;
+		num = 32 + rand() % (126 - 32);
+		if (acu < 126 && acu > 32)
+		{
+			num = acu;
+		}
+	}
+
+	return (0);
 }
