@@ -17,13 +17,11 @@ char *_strcpy(char *dest, char *src)
 		i++;
 	}
 
-	t = i - 1;
-
-	i = 0;
-	while (i <= t)
+	t = 0;
+	while (t <= i)
 	{
-		*(dest + i) = *(src + i);
-		i++;
+		*(dest + t) = *(src + t);
+		t++;
 	}
 
 	return (dest);
