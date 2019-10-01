@@ -13,7 +13,6 @@ int main(void)
 	int num, acu = 2772;
 
 	srand(time(NULL));
-	num = rand();
 	num = 32 + rand() % (126 - 32);
 
 	while (acu != 0)

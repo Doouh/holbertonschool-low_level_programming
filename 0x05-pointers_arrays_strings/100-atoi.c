@@ -1,51 +1,45 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
-* _atoi - Entry point
-* @s: int variable
-*
-* Return: Always 0 (Success)
-*/
+ * _atoi - entry point
+ * @s: char variable
+ *
+ * Return: valor
+ */
 
 int _atoi(char *s)
 {
-	int i = 0, sg = 1, b1 = 0, pi, pf, b2 = 0, p = 1, b3 = 0;
-	unsigned int v = 0;
+	unsigned int valor = 0;
+	int i, t, cont, j = 0;
 
-	while (*(s + i) != '\0')
+	if (*s == '\0')
+		return (0);
+	t = 0;
+	cont = 0;
+	for (i = 0; s[i] < 48 || s[i] > 57; i++)
 	{
-		if (*(s + i) == '-' && b1 == 0)
-			sg = sg * -1;
-		if (s[i] >= 48 && s[i] <= 57)
+		if (s[i] == '-')
 		{
-			if (b3 == 0)
+			cont++;
+		}
+	}
+
+	for (; s[j] != '\0' && t == 0; j++)
+	{
+		if (s[j] >= 48 && s[j] <= 57)
+		{
+			valor = valor * 10 + s[j] - '0';
+
+			if (s[j + 1] < 48 || s[j + 1] > 57)
 			{
-				b1 = 1;
-				if (b2 == 0)
-					pi = i;
-				b2 = 1;
+				t++;
 			}
 		}
-		else if (b2 == 1)
-		{
-			b3 = 1;
-			pf = i - 1;
-			break;
-		}
-		if (b2 == 1 && *(s + i + 1) == '\0')
-			pf = i;
-		i++;
 	}
-	if (b2 != 1)
-		return (0);
 
-	for (i = pf; i >= pi; i--)
+	if ((cont % 2) != 0)
 	{
-		v += (s[i] - '0') * p;
-		p = p * 10;
+		valor = valor * -1;
 	}
-	if (sg == -1)
-		v = v * -1;
-	return (v);
+	return (valor);
 }
