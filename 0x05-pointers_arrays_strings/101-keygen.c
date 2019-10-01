@@ -8,5 +8,8 @@
 
 int main(void)
 {
-	return(0);
+	int i;
+
+	for (i = 0; i <= i + 2; i++)
+		return(i);
 }

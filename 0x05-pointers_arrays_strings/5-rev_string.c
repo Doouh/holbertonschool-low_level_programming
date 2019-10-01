@@ -20,11 +20,11 @@ void rev_string(char *s)
 	j = t;
 
 	char aux[t];
-	
+
 	i = 0;
 	while (i < t)
 	{
-		aux[i] = *(s + j-1);
+		aux[i] = *(s + j - 1);
 		i++;
 		j--;
 	}
