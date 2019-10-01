@@ -13,8 +13,6 @@ int _atoi(char *s)
 	int i = 0, sg = 1, b1 = 0, pi, pf, b2 = 0, b3 = 0, lon, p = 1, j;
 	unsigned int v = 0;
 
-	if (s[0] == '\0')
-		return (0);
 	while (*(s + i) != '\0')
 	{
 		if (*(s + i) == '-' && b1 == 0)
@@ -39,6 +37,8 @@ int _atoi(char *s)
 			pf = i;
 		i++;
 	}
+	if (b2 != 1)
+		return (0);
 	lon = pf - pi;
 	j = lon - 1;
 	for (i = pf; i >= pi; i--)
