@@ -20,10 +20,10 @@ void puts_half(char *str)
 
 	if (t != 1)
 	{
-		if (t % 2 != 0)
-			i = (t - 1) / 2;
-		else
+		if (t % 2 == 0)
 			i = t / 2;
+		else
+			i = (t + 1) / 2;
 
 		while (*(str + i) != '\0')
 		{
