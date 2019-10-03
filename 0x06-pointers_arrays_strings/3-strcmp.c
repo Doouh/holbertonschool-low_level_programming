@@ -18,6 +18,13 @@ int _strcmp(char *s1, char *s2)
 	while (s2[t2] != 0)
 		t2++;
 
+	if (t1 > t2)
+		dif = s1[t1 - 1];
+	if (t1 < t2)
+		dif = s2[t2 - 1] * -1;
+	if (t1 == t2)
+		dif = 0;
+
 	while (s1[i] != 0 && s2[i] != 0)
 	{
 		if (s1[i] != s2[i])
@@ -27,15 +34,5 @@ int _strcmp(char *s1, char *s2)
 		}
 		i++;
 	}
-
-	if (t1 > t2)
-		dif = s1[t1 - 1];
-
-	if (t1 < t2)
-		dif = s2[t2 - 1] * -1;
-
-	if (t1 == t2)
-		dif = 0;
-
 	return (dif);
 }
