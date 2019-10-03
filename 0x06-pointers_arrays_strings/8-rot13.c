@@ -9,17 +9,18 @@
 char *rot13(char *s)
 {
 	int i = 0, j = 0;
-	char *rM = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *rm = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *ri = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *ro = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (s[i])
 	{
-		j = 0;
-		while (j < 52)
+		for (j = 0; j < 52; j++)
 		{
-			if (s[i] == rM[j])
-				s[i] = rm[j];
-			j++;
+			if (s[i] == ri[j])
+			{
+				s[i] = ro[j];
+				break;
+			}
 		}
 		i++;
 	}
