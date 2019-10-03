@@ -5,6 +5,7 @@
 * @dest: char variable
 * @src: char variable
 * @n: int variable
+* Return: dest
 *
 */
 
@@ -29,5 +30,5 @@ char *_strncat(char *dest, char *src, int n)
 		k++;
 	}
 
-	return(dest);	
+	return (dest);
 }

@@ -3,13 +3,16 @@
 
 /**
 * _strcat - Entry point
+* @dest: char variable
 * @src: char variable
 *
+* Return: dest
 */
 
 char *_strcat(char *dest, char *src)
 {
 	int i = 0, j = 0;
+
 	while (dest[i])
 		i++;
 
@@ -20,5 +23,5 @@ char *_strcat(char *dest, char *src)
 		i++;
 	}
 
-	return(dest);
+	return (dest);
 }

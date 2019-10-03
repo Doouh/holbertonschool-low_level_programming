@@ -5,7 +5,7 @@
 * _strcmp - Entry point
 * @s1: char variable
 * @s2: char variable
-*
+* Return: dif
 */
 
 int _strcmp(char *s1, char *s2)
@@ -29,11 +29,11 @@ int _strcmp(char *s1, char *s2)
 	}
 
 	if (t1 > t2)
-		dif = s1[t1-1];
+		dif = s1[t1 - 1];
 
 	if (t1 < t2)
-		dif = s2[t2-1] * -1;
-	
+		dif = s2[t2 - 1] * -1;
+
 	if (t1 == t2)
 		dif = 0;
 
