@@ -12,7 +12,7 @@ char *cap_string(char *s)
 
 	while (s[i])
 	{
-		if (s[i] == 9 || s[i] == '\n' || s[i] == 32 || s[i] == 44)
+		if (s[i] == '\t' || s[i] == '\n' || s[i] == 32 || s[i] == 44)
 			ban = 1;
 		if (s[i] == 59 || s[i] == 46 || s[i] == 33 || s[i] == 63)
 			ban = 1;
