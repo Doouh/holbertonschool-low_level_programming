@@ -21,7 +21,10 @@ char *_strstr(char *hk, char *ne)
 		{
 			cont++;
 			if (cont == t)
-				return (hk + i - t + 1);
+			{
+				hk = hk + i - t + 1;
+				return (hk);
+			}
 			j++;
 		}
 		else
@@ -31,5 +34,6 @@ char *_strstr(char *hk, char *ne)
 		}
 		i++;
 	}
-	return (hk + i);
+	hk = hk + i;
+	return (hk);
 }
