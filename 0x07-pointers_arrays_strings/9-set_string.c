@@ -1,14 +1,14 @@
 #include "holberton.h"
 
 /**
-* _memset - Entry point
+* set_string - Entry point
 * @s: char variable
-* @b: char variable
+* @to: char variable
 *
 * Return: dest
 */
 
-char *_memset(char *s, char b, unsigned int n)
+void set_string(char **s, char *to)
 {
-	
+	*(s) = to;
 }
