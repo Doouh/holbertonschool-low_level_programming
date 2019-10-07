@@ -34,6 +34,6 @@ char *_strstr(char *hk, char *ne)
 		}
 		i++;
 	}
-	hk = hk + i;
+	hk = 0;
 	return (hk);
 }
