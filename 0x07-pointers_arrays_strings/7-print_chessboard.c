@@ -1,14 +1,21 @@
 #include "holberton.h"
 
 /**
-* _memset - Entry point
-* @s: char variable
-* @b: char variable
+* print_chessboard - Entry point
+* @a: char variable
 *
-* Return: dest
 */
 
-char *_memset(char *s, char b, unsigned int n)
+void print_chessboard(char (*a)[8])
 {
-	
+	int i, j;
+
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+		{
+			_putchar(a[i][j]);
+		}
+		_putchar('\n');
+	}
 }
