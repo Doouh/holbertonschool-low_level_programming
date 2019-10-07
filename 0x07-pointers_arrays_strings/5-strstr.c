@@ -15,6 +15,9 @@ char *_strstr(char *hk, char *ne)
 	while (ne[t])
 		t++;
 
+	if (t == 0)
+		return (hk);
+
 	while (hk[i])
 	{
 		if (hk[i] == ne[j])
