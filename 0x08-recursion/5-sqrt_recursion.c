@@ -1,10 +1,11 @@
 #include "holberton.h"
 
 /**
-* _sqrt_recursion - Entry point
-* @n: int variable
-*
-* Return: sq
+ * rt - Entry point
+ * @n: int variable
+ * @x: int variable
+ *
+ * Return: x
 */
 
 int rt(int n, int x)
@@ -14,10 +15,17 @@ int rt(int n, int x)
 
 	if (x > (n / 2))
 		return (-1);
-	x++; 
+	x++;
 	x = rt(n, x);
 	return (x);
 }
+
+/**
+ * _sqrt_recursion - Entry point
+ * @n: int variable
+ *
+ * Return: sq
+ */
 
 int _sqrt_recursion(int n)
 {
@@ -25,6 +33,6 @@ int _sqrt_recursion(int n)
 		return (n);
 	if (n < 0)
 		return (-1);
-		
+
 	return (rt(n, 2));
 }
