@@ -2,14 +2,17 @@
 
 /**
 * factorial - Entry point
-* @s: int variable
+* @n: int variable
 *
 * Return: f
 */
 
 int factorial(int n)
 {
-	int f;
-	
-	return (f);
+	if (n < 0)
+		return (-1);
+	if (n == 0)
+		return (1);
+	else
+		return (factorial(n - 1) * (n));
 }

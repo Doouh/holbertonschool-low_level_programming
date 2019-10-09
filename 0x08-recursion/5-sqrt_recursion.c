@@ -7,9 +7,24 @@
 * Return: sq
 */
 
+int rt(int n, int x)
+{
+	if (x * x == n)
+		return (x);
+	if (x < (n / 2))
+		rt(n, x++);
+	else
+		return (-1);
+	//if (x * x == n)
+	//	return (x);
+}
+
 int _sqrt_recursion(int n)
 {
-	int sq;
-
-	return (sq);
+	if (n == 0 || n == 1)
+		return (n);
+	if (n < 0)
+		return (-1);
+		
+	return (rt(n, 2));
 }
