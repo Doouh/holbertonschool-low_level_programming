@@ -11,12 +11,12 @@ int rt(int n, int x)
 {
 	if (x * x == n)
 		return (x);
-	if (x < (n / 2))
-		rt(n, x++);
-	else
+
+	if (x > (n / 2))
 		return (-1);
-	//if (x * x == n)
-	//	return (x);
+	x++; 
+	x = rt(n, x);
+	return (x);
 }
 
 int _sqrt_recursion(int n)
