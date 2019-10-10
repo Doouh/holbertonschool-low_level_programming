@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
 * _strlen - int function
@@ -19,7 +18,6 @@ int _strlen(char *s)
 		i++;
 		i = i + _strlen(s);
 	}
-
 	return (i);
 }
 
@@ -37,7 +35,6 @@ int ipi(char *s, int t, int i)
 {
 	if (s[i] != s[t])
 		return (0);
-
 	if (i != t - 2)
 	{
 		t--;
@@ -46,7 +43,6 @@ int ipi(char *s, int t, int i)
 	}
 	else
 		return (1);
-
 	return (t);
 }
 
@@ -63,7 +59,6 @@ int ipp(char *s, int t, int i)
 {
 	if (s[i] != s[t])
 		return (0);
-
 	if (i != t - 1)
 	{
 		t--;
@@ -72,7 +67,6 @@ int ipp(char *s, int t, int i)
 	}
 	else
 		return (1);
-
 	return (t);
 }
 
