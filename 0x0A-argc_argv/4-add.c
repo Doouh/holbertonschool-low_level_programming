@@ -26,13 +26,7 @@ int main(int argc, char *argv[])
 			}
 			c++;
 		}
-		if (atoi(argv[i]) >= 0 && atoi(argv[i]) <= 9)
-			acu = acu + atoi(argv[i]);
-		else
-		{
-			printf("Error\n");
-			return (0);
-		}
+		acu = acu + atoi(argv[i]);
 	}
 	printf("%d\n", acu);
 
