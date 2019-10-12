@@ -1,28 +1,22 @@
-General
+# 0x04. C - More functions, more nested loops
+In this project we work functions, and nested loops; again with the correct printing of texts and figures with characters.
+**Requeriment:** You are not allowed to use the standard library. Any use of functions like `printf`, `puts`, etc… is forbidden.
+## Task Index
+|File name              |Description                         |
+|-----------------------|------------------------------------|
+|[0-isupper.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/0-isupper.c)|Function that checks for uppercase character.<br>- Prototype: `int _isupper(int c);`<br>- Returns `1` if `c` is uppercase.<br>- Returns `0` otherwise.|
+|[1-isdigit.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/1-isdigit.c)|Function that checks for a digit (`0` through `9`).<br>- Prototype: `int _isdigit(int c);`<br>- Returns `1` if `c` is a digit.<br>- Returns `0` otherwise.|
+|[2-mul.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/2-mul.c)|Function that multiplies two integers.<br>- Prototype: `int mul(int a, int b);`|
+|[3-print_numbers.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/3-print_numbers.c)|Function that prints the numbers, from `0` to `9`, followed by a new line.<br>- Prototype: `void print_numbers(void)`;<br>- You can only use `_putchar` twice in your code.|
+|[4-print_most_numbers.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/4-print_most_numbers.c)|Function that prints the numbers, from `0` to `9`, followed by a new line.<br>- Prototype: `void print_most_numbers(void);`<br>- Do not print `2` and `4`.<br>- You can only use `_putchar` twice in your code.|
+|[5-more_numbers.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/5-more_numbers.c)|Function that prints 10 times the numbers, from `0` to `14`, followed by a new line.<br>- Prototype: `void more_numbers(void);`<br>- You can only use `_putchar` three times in your code.|
+|[6-print_line.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/6-print_line.c)|Function that draws a straight line in the terminal.<br>- Prototype: `void print_line(int n);`<br>- You can only use `_putchar` function to print.<br>- Where `n` is the number of times the character `_` should be printed.<br>- The line should end with a `\n`.<br>- If `n` is `0` or less, the function should only print `\n`.|
+|[7-print_diagonal.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/7-print_diagonal.c)|Function that draws a diagonal line on the terminal.<br>- Prototype: `void print_diagonal(int n);`<br>- You can only use `_putchar` function to print.<br>- Where `n` is the number of times the character `\` should be printed.<br>- The diagonal should end with a `\n`.<br>- If `n` is `0` or less, the function should only print a `\n`.|
+|[8-print_square.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/8-print_square.c)|Function that prints a square, followed by a new line.<br>- Prototype: `void print_square(int size);`<br>- You can only use `_putchar` function to print.<br>- Where `size` is the size of the square.<br>- If `size` is `0` or less, the function should print only a new line.<br>- Use the character `#` to print the square.|
+|[9-fizz_buzz.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/9-fizz_buzz.c)|Program that prints the numbers from `1` to `100`, followed by a new line. But for multiples of three print `Fizz` instead of the number and for the multiples of five print `Buzz`. For numbers which are multiples of both three and five print `FizzBuzz`.<br>- Each number or word should be separated by a space.<br>- You are allowed to use the standard library.|
+|[10-print_triangle.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/10-print_triangle.c)|Function that prints a triangle, followed by a new line.<br>- Prototype: `void print_triangle(int size);`<br>- You can only use `_putchar` function to print.<br>- Where `size` is the size of the triangle.<br>- If `size` is `0` or less, the function should print only a new line.<br>- Use the character `#` to print the triangle.|
+|**Advanced Tasks**||
+|[100-prime_factor.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/100-prime_factor.c)|Program that finds and prints the largest prime factor of the number `612852475143`, followed by a new line.<br>- You are allowed to use the standard library.|
+|[101-print_number.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x04-more_functions_nested_loops/101-print_number.c)|Function that prints an integer.<br>- Prototype: `void print_number(int n);`<br>- You can only use `_putchar` function to print.<br>- You are not allowed to use `long`.<br>- You are not allowed to use arrays or pointers.<br>- You are not allowed to hard-code special values.|
 
-    What are nested loops and how to use them
-    What is a function and how do you use functions
-    What is the difference between a declaration and a definition of a function
-    What is a prototype
-    Scope of variables
-    What are the gcc flags -Wall -Werror -pedantic -Wextra
-    What are header files and how to to use them with #include
-
-Requirements
-General
-
-    Allowed editors: vi, vim, emacs
-    All your files will be compiled on Ubuntu 14.04 LTS
-    Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-    All your files should end with a new line
-    A README.md file, at the root of the folder of the project is mandatory
-    Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-    You are not allowed to use global variables
-    No more than 5 functions per file
-    You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
-    You are allowed to use _putchar
-    You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-    In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-    The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
-    Don’t forget to push your header file
-
+**At the end of the day, all the tasks and their proposed requirements were satisfactorily fulfilled.**
