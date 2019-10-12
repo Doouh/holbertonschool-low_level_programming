@@ -1,4 +1,4 @@
-# # 0x01. C - Variables, if, else, while
+# 0x01. C - Variables, if, else, while
 In this project we deal with conditionals, loops and the management of variables, especially with exercises based on the correct printing of messages.
 ## Task Index
 |File name              |Description                         |
