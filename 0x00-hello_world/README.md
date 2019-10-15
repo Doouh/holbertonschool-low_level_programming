@@ -1,1 +1,17 @@
-Directory with C tasks
+# 0x00. C - Hello, World
+As the name implies, in this project we address the first steps in C; the compilation of a .c file and the famous printing of a text as a starting point in a programming language.
+## Task Index
+|File name              |Description                         |
+|-----------------------|------------------------------------|
+|[0-preprocessor](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x00-hello_world/0-preprocessor)    |Script that runs a C file through the preprocessor and save the result into another file.<br>- The C file name will be saved in the variable `$CFILE`.<br>- The output should be saved in the file `c`.|
+|[1-compiler](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x00-hello_world/1-compiler)|Script that compiles a C file but does not link.<br>- The C file name will be saved in the variable `$CFILE`.<br>- The output file should be named the same as the C file, but with the extension `.o` instead of `.c`.|
+|[2-assembler](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x00-hello_world/2-assembler)|Script that generates the assembly code of a C code and save it in an output file.<br>- The C file name will be saved in the variable `$CFILE`.<br>- The output file should be named the same as the C file, but with the extension `.s` instead of `.c`.|
+|[3-name](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x00-hello_world/3-name)|Script that compiles a C file and creates an executable named `cisfun`.<br>- The C file name will be saved in the variable `$CFILE`.|
+|[4-puts.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x00-hello_world/4-puts.c)|C program that prints exactly `"Programming is like building a multilingual puzzle`, followed by a new line.<br>- Use the function `puts`.<br>- You are not allowed to use `printf`.<br>- Your program should end with the value `0`.|
+|[5-printf.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x00-hello_world/5-printf.c)|C program that prints exactly `with proper grammar, but the outcome is a piece of art,`, followed by a new line.<br>- Use the function `printf`.<br>- You are not allowed to use the function `puts`.<br>- Your program should return `0`.|
+|[6-size.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x00-hello_world/6-size.c)|C program that prints the size of various types on the computer it is compiled and run on.<br>- You should produce the exact same output as in the example.<br>- Warnings are allowed.<br>- Your program should return `0`.|
+|**Advanced Tasks**||
+|[100-intel](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x00-hello_world/100-intel)|Script that generates the assembly code (Intel syntax) of a C code and save it in an output file.<br>- The C file name will be saved in the variable `$CFILE`.<br>- The output file should be named the same as the C file, but with the extension `.s` instead of `.c`.|
+|[101-quote.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x00-hello_world/101-quote.c)|C program that prints exactly `and that piece of art is useful" - Dora Korpar, 2015-10-19`, followed by a new line, to the standard error.<br>- You are not allowed to use any functions listed in the NAME section of the man (3) `printf` or man (3) `puts`.<br>- Your program should return 1.|
+
+**At the end of the day, all the tasks and their proposed requirements were satisfactorily fulfilled.**

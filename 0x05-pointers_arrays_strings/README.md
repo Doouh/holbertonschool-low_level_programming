@@ -1,26 +1,20 @@
-General
+# 0x05. C - Pointers, arrays and strings
+In this project we work pointers, arrays and strings; We did exercises in which it was necessary to correctly access the assigned memory addresses to obtain the requested results. In addition, the first [crackme](https://github.com/holbertonschool/0x04.c), file that was unlocked by finding the correct password. **Requirement:** You are not allowed to use the standard library. Any use of functions like `printf`, `puts`, etc… is forbidden.
+## Task Index
+|File name              |Description                         |
+|-----------------------|------------------------------------|
+|[0-reset_to_98.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/0-reset_to_98.c)|Function that takes a pointer to an `int` as parameter and updates the value it points to to `98`.<br>- Prototype: `void reset_to_98(int *n);`|
+|[1-swap.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/1-swap.c)|Function that swaps the values of two integers.<br>- Prototype: `void swap_int(int *a, int *b);`|
+|[2-strlen.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/2-strlen.c)|Function that returns the length of a string.<br>- Prototype: `int _strlen(char *s);`|
+|[3-puts.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/3-puts.c)|Function that prints a string, followed by a new line, to `stdout`.<br>- Prototype: `void _puts(char *str);`|
+|[4-print_rev.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/4-print_rev.c)|Function that prints a string, in reverse, followed by a new line.<br>- Prototype: `void print_rev(char *s);`|
+|[5-rev_string.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/5-rev_string.c)|Function that reverses a string.<br>- Prototype: `void rev_string(char *s);`|
+|[6-puts2.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/6-puts2.c)|Function that prints every other character of a string, starting with the first character, followed by a new line.<br>- Prototype: `void puts2(char *str);`|
+|[7-puts_half.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/7-puts_half.c)|Function that prints half of a string, followed by a new line.<br>- Prototype: `void puts_half(char *str);`<br>- The function should print the second half of the string.<br>- If the number of characters is odd, the function should print the last `n` characters of the string, where `n = (length_of_the_string - 1) / 2`.|
+|[8-print_array.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/8-print_array.c)|Function that prints `n` elements of an array of integers, followed by a new line.<br>- Prototype: `void print_array(int *a, int n);`<br>- Where `n` is the number of elements of the array to be printed.<br>- Numbers must be separated by comma, followed by a space.<br>- The numbers should be displayed in the same order as they are stored in the array.<br>- You are allowed to use `printf`.|
+|[9-strcpy.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/9-strcpy.c)|Function that copies the string pointed to by `src`, including the terminating null byte (`\0`), to the buffer pointed to by `dest`.<br>- Prototype: `char *_strcpy(char *dest, char *src);`<br>- Return value: the pointer to `dest`.|
+|**Advanced Tasks**||
+|[100-atoi.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/100-atoi.c)|Function that convert a string to an integer.<br>- Prototype: `int _atoi(char *s);`<br>- The number in the string can be preceded by an infinite number of characters.<br>- You need to take into account all the `-` and `+` signs before the number.<br>- If there are no numbers in the string, the function must return `0`.<br>- You are not allowed to use `long`.<br>- You are not allowed to declare new variables of “type” array.<br>- You are not allowed to hard-code special values.|
+|[101-keygen.c](https://github.com/Doouh/holbertonschool-low_level_programming/blob/master/0x05-pointers_arrays_strings/101-keygen.c)|Program that generates random valid passwords for the program [crackme](https://github.com/holbertonschool/0x04.c).<br>- You are allowed to use the standard library.|
 
-    What are pointers and how to use them
-    What are arrays and how to use them
-    What are the differences between pointers and arrays
-    How to use strings and how to manipulate them
-    Scope of variables
-
-Requirements
-General
-
-    Allowed editors: vi, vim, emacs
-    All your files will be compiled on Ubuntu 14.04 LTS
-    Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-    All your files should end with a new line
-    A README.md file, at the root of the folder of the project is mandatory
-    Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-    You are not allowed to use global variables
-    No more than 5 functions per file
-    You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
-    You are allowed to use _putchar
-    You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-    In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-    The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
-    Don’t forget to push your header file
-
+**At the end of the day, all the tasks and their proposed requirements were satisfactorily fulfilled.**
