@@ -21,7 +21,7 @@ char *str_concat(char *s1, char *s2)
 
 	ar = malloc(t1 + t2 + 1);
 
-	if (!ar)
+	if (ar == NULL)
 		return (NULL);
 	while (i < t1)
 	{
