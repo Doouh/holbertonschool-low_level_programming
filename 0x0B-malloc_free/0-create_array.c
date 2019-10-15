@@ -20,13 +20,10 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	else
+	while (i < size)
 	{
-		while (i < size)
-		{
-			ar[i] = c;
-			i++;
-		}
+		ar[i] = c;
+		i++;
 	}
 	return (ar);
 }
