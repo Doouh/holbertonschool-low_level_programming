@@ -1,97 +1,52 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "holberton.h"
 
 /**
- * cp - entry point
- * @str: char variable
- *
- * Return: p
-*/
-
-int cp(char *str)
-{
-	int i = 0, p = 0, b = 0;
-
-	while (str[i])
-	{
-		if (str[i] != ' ')
-		{
-			p++;
-			i++;
-			while (str[i] != ' ' && str[i] != '\0')
-				i++;
-			if (str[i] == '\0')
-				b = 1;
-		}
-		if (b == 0)
-			i++;
-	}
-	return (p);
-}
-
-/**
- * free_grid - entry point
- * @grid: char variable
- * @hgt: int variable
- *
- */
-
-void free_grid(char **grid, int hgt)
-{
-	int i;
-
-	for (i = 0; i < hgt; i++)
-		free(grid[i]);
-	free(grid);
-}
-
-/**
- * strtow - entry point
- * @str: char variable
- *
- * Return: ar or NULL
+ * strtow - splits strings to words
+ * @str: string to split
+ * Return: pointer to an array of words
  */
 
 char **strtow(char *str)
 {
-	char **rm;
-	int i = 0, j = 0, aux = 0, aux1 = 0, t = 0, ll = 0, s = 0;
+	char **array;
+	int i, j, count, len, k, m;
 
-	aux = cp(str);
-	rm = malloc(sizeof(char *) * aux);
-	if (rm == NULL)
+	count = k = 0;
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	for (i = 0; i < aux; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		aux1 = 0;
-		t = 0;
-		while (t == 0)
-		{
-			if (str[j] != ' ')
-			{
-				s = j;
-				while (str[j] != ' ' && str[j] != '\0')
-				{
-					aux1++;
-					j++;
-					t = 1;
-				}
-			}
-			j++;
-		}
-		rm[i] = malloc(sizeof(char) * aux1 + 1);
-		if (rm[i] == NULL)
-		{
-			free_grid(rm, i);
-			return (NULL);
-		}
-		for (ll = 0; ll < aux1; ll++)
-		{
-			rm[i][ll] = str[s];
-			s++;
-		}
-		rm[i][aux1] = '\0';
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+			count++;
 	}
-	rm[i] = NULL;
-	return (rm);
+	if (count == 0)
+		return (NULL);
+	array = malloc(((count + 1) * sizeof(char *)));
+	if (array == NULL)
+		return (NULL);
+	for (i = 0; str[i] !=  '\0' && k < count; i++)
+	{
+		if (str[i] != ' ')
+		{
+			len = 0;
+			j = i;
+			while (str[j] != ' ' && str[j] != '\0')
+				j++, len++;
+			array[k] = malloc((len + 1) * sizeof(char));
+			if (array[k] == NULL)
+			{
+				for (k = k - 1; k >= 0; k++)
+					free(array[k]);
+				free(array);
+				return (NULL);
+			}
+			for (m = 0; m < len; m++, i++)
+				array[k][m] = str[i];
+			array[k++][m] = '\0';
+		}
+	}
+	array[k] = NULL;
+	return (array);
 }
