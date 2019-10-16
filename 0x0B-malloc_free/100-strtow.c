@@ -3,50 +3,49 @@
 #include "holberton.h"
 
 /**
- * strtow - splits strings to words
- * @str: string to split
- * Return: pointer to an array of words
+ * strtow - entry point
+ * @str: char variable
+ * Return: **ar
  */
 
 char **strtow(char *str)
 {
-	char **array;
-	int i, j, count, len, k, m;
+	char **ar;
+	int i, j, cont = 0, t, k = 0, m;
 
-	count = k = 0;
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-			count++;
+			cont++;
 	}
-	if (count == 0)
+	if (cont == 0)
 		return (NULL);
-	array = malloc(((count + 1) * sizeof(char *)));
-	if (array == NULL)
+	ar = malloc((cont + 1) * sizeof(char *));
+	if (ar == NULL)
 		return (NULL);
-	for (i = 0; str[i] !=  '\0' && k < count; i++)
+	for (i = 0; str[i] !=  '\0' && k < cont; i++)
 	{
 		if (str[i] != ' ')
 		{
-			len = 0;
+			t = 0;
 			j = i;
 			while (str[j] != ' ' && str[j] != '\0')
-				j++, len++;
-			array[k] = malloc((len + 1) * sizeof(char));
-			if (array[k] == NULL)
+				j++, t++;
+			ar[k] = malloc((t + 1) * sizeof(char));
+			if (ar[k] == NULL)
 			{
 				for (k = k - 1; k >= 0; k++)
-					free(array[k]);
-				free(array);
+					free(ar[k]);
+				free(ar);
 				return (NULL);
 			}
-			for (m = 0; m < len; m++, i++)
-				array[k][m] = str[i];
-			array[k++][m] = '\0';
+			for (m = 0; m < t; m++, i++)
+				ar[k][m] = str[i];
+			ar[k++][m] = '\0';
 		}
 	}
-	array[k] = NULL;
-	return (array);
+	ar[k] = NULL;
+	return (ar);
 }
