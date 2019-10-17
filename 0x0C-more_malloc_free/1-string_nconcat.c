@@ -38,8 +38,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (j < t)
 	{
 		ar[j] = s2[i];
-		j++, i++;
+		i++;
 	}
-	ar[j + 1] = '\0';
+	ar[j + i] = '\0';
 	return (ar);
 }
