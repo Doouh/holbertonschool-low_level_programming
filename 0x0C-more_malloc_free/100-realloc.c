@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _realloc - entry point
@@ -11,8 +12,8 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *ar;
-	int i = 0;
+	char *ar;
+	unsigned int i = 0;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -21,16 +22,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL);
 	}
-
 	ar = malloc(new_size);
 	if (ar == NULL)
 		return (NULL);
-
-	while (((char *)ptr)[i])
+	while (((char *)ptr)[i] && i < new_size)
 	{
-		((char *)ar)[i] = ((char *)ptr)[i];
+		ar[i] = ((char *)ptr)[i];
 		i++;
 	}
-
+	free(ptr);
 	return (ar);
 }
