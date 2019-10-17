@@ -6,7 +6,7 @@
  * @s2: char variable
  * @n: unsigned int
  *
- * Return: er
+ * Return: ar
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -18,13 +18,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	while (s1[i])
-		i++;
-	ar = malloc(n + i + 1);
+	while (s1[k])
+		k++;
+	ar = malloc(n + k + 1);
 	if (ar == NULL)
 		return (NULL);
 	j = 0;
-	while (j < i)
+	while (j < k)
 	{
 		ar[j] = s1[j];
 		j++;
