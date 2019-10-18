@@ -16,15 +16,15 @@ int _strlen(char *s);
  * @argc: int variable
  * @argv: char variable
  *
- * Return: 0 
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	unsigned int mem;
+	unsigned int tt;
 	int i;
 
-	char *ret;
+	char *res;
 
 	if (argc != 3)
 	{
@@ -39,12 +39,12 @@ int main(int argc, char *argv[])
 			return (98);
 		}
 	}
-	mem = _strlen(argv[1]) + _strlen(argv[2]) + 1;
-	ret = _calloc(mem, sizeof(char));
-	if (ret == NULL)
+	tt = _strlen(argv[1]) + _strlen(argv[2]) + 1;
+	res = _calloc(tt, sizeof(char));
+	if (res == NULL)
 		return (98);
-	ret = mul(argv[1], argv[2], ret, mem);
-	printf("%s\n", ret);
+	res = mul(argv[1], argv[2], res, tt);
+	printf("%s\n", res);
 	return (0);
 }
 
@@ -58,6 +58,7 @@ int main(int argc, char *argv[])
  *
  * Return: new
  */
+
 char *mul(char *s1, char *s2, char *new, unsigned int size_b)
 {
 	char *mn, *my;
@@ -98,6 +99,7 @@ int _strlen(char *s)
  *
  * Return: 0 or 1
  */
+
 int cletras(char *str)
 {
 	while (*str)
@@ -108,6 +110,7 @@ int cletras(char *str)
 	}
 	return (0);
 }
+
 /**
  * _atoi - entry point
  *
@@ -115,6 +118,7 @@ int cletras(char *str)
  *
  * Return: total
  */
+
 int _atoi(char *s)
 {
 	int sign = 1;
@@ -152,7 +156,7 @@ int _atoi(char *s)
  *
  * Return: pointer to r
  */
-     
+
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int tempSizeR = size_r;
@@ -165,7 +169,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		t2++;
 	if (t1 > size_r - 2 || t2 > size_r - 2)
 		return (0);
-	t1--, t2--; 
+	t1--, t2--;
 	while (size_r >= 0)
 	{
 		if (size_r == tempSizeR)
@@ -200,7 +204,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	mfi(r, tempSizeR, fill);
 	return (r);
 }
-
 /**
  * mfi - entry point
  * @arr: char variable
@@ -208,12 +211,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
  * @aux: char variable
  *
  */
-
 void mfi(char *arr, int arrSize, char aux)
 {
 	int i = 0;
 	int pos = 0;
-	
+
 	while (i < arrSize)
 	{
 		if (arr[i] != aux)
@@ -235,20 +237,18 @@ void mfi(char *arr, int arrSize, char aux)
  *
  * Return: void pointer to beginning of alloc/init'ed memory
  */
-
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ret;
+	void *res;
 
 	if (nmemb < 1 || size < 1)
 		return (NULL);
-	ret = malloc(nmemb * size);
-	if (ret == NULL)
+	res = malloc(nmemb * size);
+	if (res == NULL)
 		return (NULL);
-	ret = set_mem(ret, nmemb, size, '\0');
-	return (ret);
+	res = set_mem(res, nmemb, size, '\0');
+	return (res);
 }
-
 /**
  * set_mem - sets memory for void pointer
  *
@@ -259,7 +259,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  *
  * Return: void pointer to beginning of set memory
  */
-
 void *set_mem(void *p, unsigned int nmemb, unsigned int size, char ch)
 {
 	char *cast = p;
