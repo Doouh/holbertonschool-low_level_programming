@@ -1,18 +1,5 @@
+#include "holberton.h"
 #include <stdlib.h>
-#include <unistd.h>
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 
 /**
  * _print - entry point
@@ -50,7 +37,6 @@ void _print(char *str, int l)
  *
  * Return: dest
  */
-
 char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
 	int j, k, mul, mulrem, add, addrem;
@@ -106,7 +92,6 @@ int sonnum(char **av)
  *
  * Return: void
  */
-
 void init(char *str, int l)
 {
 	int i;
@@ -123,7 +108,6 @@ void init(char *str, int l)
  *
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
 	int l1, l2, ln, ti, i;
