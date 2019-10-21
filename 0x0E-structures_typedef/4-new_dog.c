@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * new_dog - entry point
+ * *new_dog - entry point
  * @name: sadsad
  * @age: sadasd
  * @owner: sadsa
