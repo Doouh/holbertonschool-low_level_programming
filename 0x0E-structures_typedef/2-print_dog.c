@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include "dog.h"
 
+/**
+ * print_dog - sadsad
+ * @d: sadasd
+*/
+
 void print_dog(struct dog *d)
 {
 	if (!d)
