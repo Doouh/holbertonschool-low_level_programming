@@ -1,58 +1,49 @@
 #include "dog.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * *new_dog - entry point
- * @name: sadsad
- * @age: sadasd
- * @owner: sadsa
- *
- * Return: nd
-*/
-
+ * *new_dog - function that gets the length of a prefix substring.
+ * @name: The first string
+ * @age: age of dog
+ * @owner: owner of dog
+ * Return: return dog
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *nd;
+	dog_t *dog;
 	int i = 0, j = 0;
 
-	if (!name)
+	if (name == NULL)
 		name = "";
-	if (!owner)
+	if (owner == NULL)
 		owner = "";
-	while (name[i])
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+		return (NULL);
+	while (name[i] != '\0')
 		i++;
-	while (owner[j])
+	dog->name = malloc(i + 1);
+	if (dog->name == NULL)
+	{
+		free(dog);
+		return (NULL);
+	}
+	while (owner[j] != '\0')
 		j++;
-	nd = malloc(sizeof(dog_t));
-	if (!nd)
-		return (NULL);
-	nd->name = (char *)malloc(i + 1);
-	if (!(nd->name))
+	dog->owner = malloc(j + 1);
+	if (dog->owner == NULL)
 	{
-		free(nd);
+		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
-	nd->owner = (char *)malloc(j + 1);
-	if (!(nd->owner))
-	{
-		free(nd->name);
-		free(nd);
-		return (NULL);
-	}
-	i = 0;
-	while (name[i])
-	{
-		nd->name[i] = name[i];
-		i++;
-	}
-	nd->name[i] = '\0';
-	j = 0;
-	while (owner[j])
-	{
-		nd->owner[j] = owner[j];
-		j++;
-	}
-	nd->owner[j] = '\0';
-	nd->age = age;
-	return (nd);
+	for (i = 0; name[i] != '\0'; i++)
+		dog->name[i] = name[i];
+	dog->name[i] = '\0';
+	for (j = 0; owner[j] != '\0'; j++)
+		dog->owner[j] = owner[j];
+	dog->owner[j] = '\0';
+	dog->age = age;
+	return (dog);
 }
