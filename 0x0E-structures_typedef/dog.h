@@ -1,5 +1,5 @@
-#ifndef d
-#define d
+#ifndef de
+#define de
 /**
  * struct dog - Short description
  *
