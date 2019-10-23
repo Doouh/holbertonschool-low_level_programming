@@ -11,16 +11,16 @@
 
 int main(int ac, char **av)
 {
-	int s;
+	char s;
 
 	if (ac != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	s = *av[2];
-	printf("s: %d\n", s);
-	if (s != 43 && s != 45 && s != 42 && s != 47 && s != 37)
+	s = av[2][0];
+	if ((s != 43 && s != 45 && s != 42 && s != 47 && s != 37) ||
+			(av[2][1] != '\0'))
 	{
 		printf("Error\n");
 		exit(99);
