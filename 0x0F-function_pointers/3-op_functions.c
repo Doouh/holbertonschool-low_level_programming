@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,7 +6,7 @@
  * op_add - entry point
  * @a: int variable
  * @b: int variable
- * 
+ *
  * Return: 0
 */
 
@@ -19,7 +19,7 @@ int op_add(int a, int b)
  * op_sub - entry point
  * @a: int variable
  * @b: int variable
- * 
+ *
  * Return: 0
 */
 
@@ -58,7 +58,7 @@ int op_div(int a, int b)
  * op_mod - entry point
  * @a: int variable
  * @b: int variable
- * 
+ *
  * Return: 0
 */
 
