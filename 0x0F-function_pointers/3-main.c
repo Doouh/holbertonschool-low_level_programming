@@ -11,7 +11,7 @@
 
 int main(int ac, char **av)
 {
-	char s;
+	int s;
 
 	if (ac != 4)
 	{
@@ -19,7 +19,8 @@ int main(int ac, char **av)
 		exit(98);
 	}
 	s = *av[2];
-	if (s != 43 || s != 45 || s != 42 || s != 47 || s != 37)
+	printf("s: %d\n", s);
+	if (s != 43 && s != 45 && s != 42 && s != 47 && s != 37)
 	{
 		printf("Error\n");
 		exit(99);
