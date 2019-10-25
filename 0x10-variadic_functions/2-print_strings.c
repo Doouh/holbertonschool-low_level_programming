@@ -4,19 +4,22 @@
 /**
  * print_strings - entry point
  * @separator: char variable
- * @n: int variable
+ * @num: int variable
  * @...: string
 */
+
 void print_strings(const char *separator, const unsigned int num, ...)
 {
 	va_list valist;
 	unsigned int i;
+	char *aux;
 
 	va_start(valist, num);
 	for (i = 0; i < num; i++)
 	{
-		if (va_arg(valist, char*) != NULL)
-			printf("%s", va_arg(valist, char *));
+		aux = va_arg(valist, char *);
+		if (aux != NULL)
+			printf("%s", aux);
 		else
 			printf("(nil)");
 		if (separator != NULL && i < num - 1)

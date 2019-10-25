@@ -4,7 +4,7 @@
 /**
  * print_numbers - entry point
  * @separator: int var
- * @n: int var
+ * @num: int var
  * @...: sadas
 */
 

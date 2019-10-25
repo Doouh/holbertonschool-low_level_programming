@@ -3,7 +3,7 @@
 
 /**
  * sum_them_all - entry point
- * @n: unsigned int variable
+ * @num: unsigned int variable
  * Return: int
 */
 
