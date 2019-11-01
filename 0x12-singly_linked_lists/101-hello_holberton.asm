@@ -1,11 +1,11 @@
 section .data
-	message db 'Hello, Holberton',10
-section .message
+	mess db 'Hello, Holberton',10
+section .mess
 	global main
 main:
 	mov rax,1
 	mov rdi, 1
-	mov rsi,message
+	mov rsi,mess
 	mov rdx,17
 	syscall
 
