@@ -4,7 +4,7 @@
 /**
  * sum_listint - entry point
  * @head: listint variable
- * 
+ *
  * Return: int variable
 */
 
