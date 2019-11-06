@@ -3,10 +3,10 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - entry point
+ * find_listint_loop - entry point
  * @head: listint_t variable
  *
- * Return: size_t variable
+ * Return: listint variable
 */
 
 listint_t *find_listint_loop(listint_t *head)
@@ -16,12 +16,10 @@ listint_t *find_listint_loop(listint_t *head)
 	while (head != NULL && last > head->next)
 	{
 		last = (void *)head;
-		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
 	if (head != NULL)
 	{
-		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 		printf("-> [%p] %d\n", (void *)head, head->n);
 		return (head);
