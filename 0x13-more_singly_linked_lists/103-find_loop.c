@@ -21,7 +21,6 @@ listint_t *find_listint_loop(listint_t *head)
 	if (head != NULL)
 	{
 		head = head->next;
-		printf("-> [%p] %d\n", (void *)head, head->n);
 		return (head);
 	}
 	else
