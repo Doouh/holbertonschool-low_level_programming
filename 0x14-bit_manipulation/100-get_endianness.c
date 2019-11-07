@@ -1,6 +1,6 @@
 #include "holberton.h"
-#include <stdint.h>
 #include <stdio.h>
+#include <stdint.h>
 
 /**
  * get_endianness - entry point
