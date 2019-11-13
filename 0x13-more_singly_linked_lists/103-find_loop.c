@@ -11,11 +11,11 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *last = (void *)head;
+	listint_t *last = head;
 
 	while (head != NULL && last > head->next)
 	{
-		last = (void *)head;
+		last = head;
 		head = head->next;
 	}
 	if (head != NULL)
