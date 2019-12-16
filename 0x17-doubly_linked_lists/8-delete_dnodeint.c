@@ -29,7 +29,7 @@ int delete_dnodeint_at_index(dlistint_t **h, unsigned int idx)
 	dlistint_t *aux;
 	unsigned int i = 0;
 
-	if (((*h) == NULL) || (idx > (dlistint_len(*h) + 1)))
+	if (((*h) == NULL) || (idx > (dlistint_len(*h) + 1)) || h == NULL)
 		return (-1);
 	aux = *h;
 	if (idx == 0 && dlistint_len(*h) > 1)
